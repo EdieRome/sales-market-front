@@ -1,0 +1,14 @@
+<div>
+    <h2>Items</h2>
+    <div>
+        <input [(ngModel)]="newCustomer.name" placeholder="New item name">
+        <button (click)="create()">Add</button>
+    </div>
+    <ul>
+        <li *ngFor="let customer of data">
+            <input [(ngModel)]="customer.name">
+            <button (click)="update()">Update</button>
+            <button (click)="delete()">Delete</button>
+        </li>
+    </ul>
+</div>
