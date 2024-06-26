@@ -7,8 +7,8 @@
     <ul>
         <li *ngFor="let customer of data">
             <input [(ngModel)]="customer.name">
-            <button (click)="update()">Update</button>
-            <button (click)="delete()">Delete</button>
+            <button (click)="update(customer)">Update</button>
+            <button (click)="delete(customer.id)">Delete</button>
         </li>
     </ul>
 </div>

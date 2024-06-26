@@ -17,15 +17,15 @@ export class CustomersService {
   }
 
   add(customer: Customer) {
-    this.client.post(this.url + '/get-all', customer);
+    this.client.post(this.url + '/create', customer);
   }
 
   update(customer: Customer) {
-    this.client.put(this.url + '/get-all', customer);
+    this.client.put(this.url + '/update', customer);
   }
 
   delete(id: number) {
-    this.client.delete(this.url + '/' + id + '/get-all');
+    this.client.delete(this.url + '/' + id + '/delete');
   }
 
 }

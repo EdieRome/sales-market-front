@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CustomersService } from '../../services/customers/customers.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Customer } from '../../interfaces/customer';
 
 @Component({
   selector: 'app-customers',
@@ -28,14 +29,14 @@ export class CustomersComponent implements OnInit {
   }
 
   create() {
-
+    this.service.add(this.newCustomer);
   }
 
-  update() {
-
+  update(customer: Customer) {
+    this.service.update(customer)
   }
 
-  delete() {
-
+  delete(id: number) {
+    this.service.delete(id);
   }
 }
