@@ -1,0 +1,14 @@
+<div>
+    <h2>Items</h2>
+    <div>
+        <input [(ngModel)]="newUser.name" placeholder="New item name">
+        <input [(ngModel)]="newUser.age" placeholder="New item age">
+        <input [(ngModel)]="newUser.email" placeholder="New item email">
+        <button (click)="create()">Add</button>
+    </div>
+    <ul>
+        <li *ngFor="let user of data">
+            {{user.name}} {{user.age}} {{user.email}}
+        </li>
+    </ul>
+</div>

@@ -19,7 +19,7 @@ export class CustomersComponent implements OnInit {
   constructor(private service: CustomersService) { }
 
   ngOnInit(): void {
-
+    this.getAll();
   }
 
   getAll() {
